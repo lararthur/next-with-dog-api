@@ -4,3 +4,10 @@ export const getBreeds = async () => {
   );
   return breedList;
 };
+
+export const getRanomImage = async (breed) => {
+  const randomImage = await fetch(
+    `https://dog.ceo/api/breed/${breed}/images/random`
+  ).then((response) => response.json());
+  return randomImage;
+};
