@@ -25,16 +25,28 @@ export default function Home({ breedList }) {
 
   if (breedList.length) {
     return (
-      <>
-        <select name="breeds" id="breeds" onChange={handleBreedsOptions}>
-          {breedList?.map((breed) => (
-            <option key={breed} value={breed}>
-              {breed}
-            </option>
-          ))}
-        </select>
-        <img src={currentImg} />
-      </>
+      <div className="home">
+        <div className="home__box">
+          <div
+            className="home__coverImg"
+            style={{
+              backgroundImage: `url(${currentImg})`,
+            }}
+          />
+          <select
+            className="home__select"
+            name="breeds"
+            id="breeds"
+            onChange={handleBreedsOptions}
+          >
+            {breedList?.map((breed) => (
+              <option key={breed} value={breed}>
+                {breed}
+              </option>
+            ))}
+          </select>
+        </div>
+      </div>
     );
   } else {
     return <p>carregando...</p>;

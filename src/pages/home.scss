@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background: #ccc;
+  min-height: 100vh;
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: auto;
+    overflow: hidden;
+    height: 100%;
+    background: #fff;
+  }
+
+  &__coverImg {
+    height: 400px;
+    width: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__select {
+    height: 40px;
+    margin: 0 40px;
+  }
+}
